@@ -1,0 +1,110 @@
+/* General Layout */
+.history-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #fef9f9, #f5e1da);
+    border-radius: 10px;
+    width: auto;
+    height: 560px; /* Changed to auto to prevent overflow issues */
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/* Image Section Styling */
+.history-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+}
+
+.history-main-image {
+    width: 100%; /* Changed to 100% for responsiveness */
+    max-width: 600px; /* Limits size on larger screens */
+    height: 560px; /* Maintains aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.history-main-image:hover {
+    transform: scale(1.08);
+}
+
+/* Content Section Styling */
+.history-content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-title {
+    font-size: 2rem;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+.history-highlight-bar {
+    width: 50px;
+    height: 5px;
+    background: #b5651d;
+    margin: 0.5rem 0 1.5rem 0;
+    border-radius: 5px;
+}
+
+.history-section-text {
+    font-size: 1rem;
+    color: #2d3748;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.history-button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.history-button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #b5651d, #eb8f34);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.history-button:hover {
+    background: #a04e15;
+    transform: translateY(-2px);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .history-info-section {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .history-image-section, 
+    .history-content-section {
+        width: 50%;
+    }
+
+    /* Optional: Center align content on larger screens */
+    .history-content-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centering content vertically */
+        align-items: flex-start; /* Aligning items to the start horizontally */
+    }
+}

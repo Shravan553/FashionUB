@@ -1,0 +1,313 @@
+/* Styling for the French Fries Nutrition Facts container */
+.fries-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.fries-nutrition-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.fries-nutrition-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-right: 20px; /* Add some space between the nutrients and image */
+}
+
+.fries-nutrient {
+    background-color: #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fries-nutrient p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.fries-image {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.fries-image-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space between this section and the next */
+}
+
+/* Adjust image styling */
+.fries-image {
+    max-width: 300px; /* Maintain size */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between the image and text */
+}
+
+/* Container for the text beside the image */
+.fries-text-container {
+    flex: 1; /* Take remaining space */
+}
+
+.fries-text {
+    font-size: 1.1rem; /* Existing styles */
+    color: #333; /* Existing styles */
+    line-height: 1.6; /* Existing styles */
+    margin-bottom: 15px; /* Existing styles */
+}.fries-image-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space between this section and the next */
+}
+
+/* Adjust image styling */
+.fries-image {
+    max-width: 300px; /* Maintain size */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between the image and text */
+}
+
+/* Container for the text beside the image */
+.fries-text-container {
+    flex: 1; /* Take remaining space */
+}
+
+.fries-text {
+    font-size: 1.1rem; /* Existing styles */
+    color: #333; /* Existing styles */
+    line-height: 1.6; /* Existing styles */
+    margin-bottom: 15px; /* Existing styles */
+}
+.fries-title {
+    color: #d2691e;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.hero-section {
+    background-image: url('src/assets/fri1.webp'); /* Add your hero image here */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.hero-content {
+    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 0;
+    max-width: 700px;
+}
+
+
+.fries-subtitle {
+    color: #4f4f4f;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    border-bottom: 2px solid #d2691e;
+    padding-bottom: 5px;
+}
+
+.fries-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.fries-nutrition-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.fries-nutrient {
+    background-color:  #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fries-nutrient p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.fries-benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.fries-benefits-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .fries-nutrition-info {
+        grid-template-columns: 1fr;
+    }
+    .fries-nutrition-section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .fries-image-info {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+    }
+  .fries-image {
+    max-width: 300px; /* Maintain size */
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Space between the image and text */
+}
+    
+    
+    
+    /* Styling for the nutrition facts container */
+    .fries-nutrition-info {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-right: 20px; /* Space between the nutrition facts and the image */
+    }
+    
+    .fries-nutrient {
+        background-color: #ffebcd;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .fries-nutrient p {
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    /* Styling for the image */
+    .fries-image {
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+        .fries-nutrition-section {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .fries-nutrition-info {
+            margin-right: 0;
+        }
+    
+        .fries-image {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    
+    .fries-title {
+        font-size: 2rem;
+    }
+
+    .fries-subtitle {
+        font-size: 1.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .fries-text {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #03c829;
+  }

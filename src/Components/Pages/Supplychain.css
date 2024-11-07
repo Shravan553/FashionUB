@@ -1,0 +1,313 @@
+.supply-chain-meaning {
+  padding: 40px 0;
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.supply-chain-meaning h2 {
+  font-size: 2.5rem;
+  color: #5A3D1B; /* Dark brown heading */
+  margin-bottom: 10px;
+}
+
+.supply-chain-meaning p {
+  font-size: 1.2rem;
+  color: #333; /* Standard text color */
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.supply-chain-meaning strong {
+  color: #D28F2C; /* Golden color for important text */
+}
+
+.supply-chain-wrapper {
+  font-family: Arial, sans-serif;
+}
+
+/* Header section with black overlay on image */
+.supply-chain-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-images {
+  width: 100%;
+  height: 600px;
+}
+
+/* Add black overlay using ::before */
+.supply-chain-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Black overlay with 50% opacity */
+  z-index: 1; /* Keep the overlay above the image */
+}
+
+.header-titles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.5rem; /* Slightly increased title size */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2; /* Ensure the title appears above the overlay */
+}
+
+/* Content section */
+.supply-chain-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.supply-chain-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5A2B1B;
+}
+
+/* Quality testing and supply information section */
+.supply-chain-quality {
+  background-color: #F4F4F4;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  color: #333;
+  border-left: 6px solid #A48650;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* StatisticsSection.css */
+.statistics-section {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 10px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #4CAF50;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.landscape-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.supply-chain-quality p {
+  margin: 0;
+}
+
+/* Container for AGPotato information */
+#agpotato-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Shared styling for both info boxes */
+.info-box {
+  flex: 1;
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Specific styling for the mission box */
+.mission-box {
+  background-color: #ccedbf; /* Light green background for sustainability */
+  color: #ffffff; /* Darker green text */
+}
+
+/* Specific styling for the opportunities box */
+.opportunities-box {
+  background-color: #581a1a; /* Light blue background for business opportunities */
+  color: #ffffff; /* Darker blue text */
+}
+
+
+.sourcing-section {
+  display: flex;
+  align-items: center;
+  padding: 40px; /* Increased padding for more space */
+  background-color: #F9F9F9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0; /* Space above and below the section */
+  text-align: center; /* Centered alignment */
+}
+
+.sourcing-content {
+  flex: 1;
+  margin-right: 40px; 
+  text-align: center; /* Centered alignment */
+}
+
+.sourcing-content h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5em; /* Larger heading size */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #4A4A4A; /* Darker text color */
+  text-align: center; /* Centered alignment */
+}
+
+.sourcing-content p {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.8; /* Increased line spacing for readability */
+  color: #333; /* Text color */
+  font-size: 1.2em; /* Slightly larger font size for the paragraph */
+  text-align: center; /* Centered alignment */
+}
+
+.sourcing-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image */
+}
+
+.sourcing-image img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+}
+
+.cs-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px; /* Increased padding for more space */
+  background-color: #F1F1F1; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px 0; /* Space above and below the section */
+}
+
+.cs-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image */
+  margin-right: 40px; /* Space between image and text */
+}
+
+.cs-image img {
+  width: 800px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+}
+
+.cs-content {
+  flex: 1;
+}
+
+.cs-content h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5em; /* Larger heading size */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #4A4A4A; /* Darker text color */
+}
+
+.cs-content p {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.8; /* Increased line spacing for readability */
+  color: #333; /* Text color */
+  font-size: 1.2em; /* Slightly larger font size for the paragraph */
+}
+
+.cs-content ul {
+  margin-top: 15px; /* Space above the list */
+  padding-left: 20px; /* Indent for bullet points */
+}
+
+.cs-content li {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1em; /* Bullet point font size */
+  color: #333; /* Text color */
+  margin-bottom: 8px; /* Space between bullet points */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .supply-chain-step {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-chain-step {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .supply-chain-meaning h2 {
+    font-size: 2rem;
+  }
+  
+  .supply-chain-meaning p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px; /* Adjust padding for mobile */
+      margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+
+  .content-container {
+      grid-template-columns: repeat(1, 1fr); /* Change to one column on mobile */
+  }
+
+  .content-box {
+      margin-bottom: 10px; /* Space between content boxes */
+  }
+}

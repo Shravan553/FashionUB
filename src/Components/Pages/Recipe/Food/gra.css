@@ -1,0 +1,158 @@
+.granules-container {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.granules-title {
+    color: #8b4513;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.granules-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.granules-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.granules-description {
+    flex: 1;
+}
+
+.granules-text, .granules-description p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.granules-subtitle {
+    font-size: 2rem;
+    color: #6b8e23;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.granules-nutrition {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.granules-nutrient {
+    background-color:  #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.granules-benefits, .granules-usage {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.granules-benefits li, .granules-usage li {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Hero Section Styling */
+.granules-hero {
+    background-image: url('../../../../assets/potato-hero-bg.jpg'); /* Replace with your hero background */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.granules-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.granules-hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .granules-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .granules-image {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .granules-nutrition {
+        grid-template-columns: 1fr;
+    }
+
+    .granules-title {
+        font-size: 2rem;
+    }
+
+    .granules-subtitle {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #03c829;
+  }

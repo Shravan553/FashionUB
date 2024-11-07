@@ -1,0 +1,10 @@
+/* Contact Form Container */
+.Somecontainer{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif; 
+  margin: 100px auto; /* Adjust margin-top to create more space */
+}
+
+   

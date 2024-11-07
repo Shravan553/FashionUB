@@ -1,0 +1,126 @@
+.flo-potato-flour-container {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.flo-section-title {
+    color: #8B4513;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flo-product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.flo-product-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flo-product-description {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.flo-nutrition-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.flo-nutrient {
+    background-color:  #A48650;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.flo-benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.flo-benefits-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.flo-usage-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flo-usage-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.flo-usage-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.flo-drawbacks-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.flo-scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flo-scroll-to-top:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .flo-product-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flo-product-image {
+        margin-bottom: 20px;
+    }
+
+    .flo-nutrition-info {
+        grid-template-columns: 1fr;
+    }
+
+    .flo-section-title {
+        font-size: 1.8rem;
+    }
+}

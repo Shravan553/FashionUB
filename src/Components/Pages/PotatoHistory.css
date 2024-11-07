@@ -1,0 +1,228 @@
+/* Container for the entire history section */
+.history-container {
+  width: 100%;
+  height: auto; /* Automatically adjust based on content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.history-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Image takes up 70% of the viewport height */
+}
+
+.history-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container without distortion */
+  filter: brightness(70%); /* Slightly dim the image for better text visibility */
+}
+
+/* History Info Section Card */
+.potato-history-infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+}
+
+.info-card {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a card effect */
+  border-radius: 10px; /* Rounded corners for the card */
+  max-width: 800px; /* Limits the card width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+
+.info-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* Movable Images Section */
+.movable-images-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.movable-images-grid {
+  display: flex;
+  gap: 2rem; /* Space between images */
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.movable-image-wrapper {
+  flex: 1;
+  max-width: 300px; /* Restricts the size of each image */
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movable-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 5s ease-in-out, filter 0.3s ease; /* Smooth movement and hover */
+  will-change: transform; /* Improves performance */
+}
+
+/* Hover Effect for Each Image */
+.movable-image:hover {
+  transform: scale(1.1) translateY(-10px); /* Slight zoom and upward movement */
+  filter: brightness(80%); /* Slight dimming on hover */
+}
+
+/* Floating Animation for Continuous Movement */
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.movable-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: floating 8s ease-in-out infinite; /* Floating animation */
+}
+
+/* Potato History Details Section */
+.potato-history-details {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Light background for readability */
+  animation: fadeIn 1s ease-in; /* Fade-in animation for the section */
+}
+
+.history-content {
+  max-width: 800px; /* Limits the width for readability */
+  margin: 0 auto; /* Centers the content */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Title Style */
+.history-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Subtitle Style */
+.history-content h3 {
+  font-size: 2rem;
+  color: #444;
+  margin: 1.5rem 0;
+}
+
+/* Paragraph Style */
+.history-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* List Style */
+.history-content ul {
+  margin-left: 2rem; /* Indents the list */
+  list-style-type: disc; /* Bullet points */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  /* For smaller screens like tablets and mobile phones */
+  /* Adjust the image width for mobile */
+  .content-image {
+    width: 100%; /* Make image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  /* Adjust the content-box for better spacing */
+  .content-box {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items */
+    text-align: center;
+  }
+  .content-left, .content-right {
+    padding: 0; /* Remove extra padding on mobile for better space usage */
+  }
+  /* Adjust content text */
+  .content-title {
+    font-size: 24px; /* Slightly reduce the title font size on mobile */
+  }
+  .content-text, .content-info {
+    font-size: 16px; /* Reduce text size for mobile */
+  }
+  /* Adjust hero section for smaller screens */
+  .hero-section {
+    height: 300px; /* Reduce height for smaller screens */
+  }
+  .hero-title {
+    font-size: 36px; /* Reduce title size */
+  }
+  .hero-subtitle {
+    font-size: 18px; /* Reduce subtitle size */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px; /* Adjust padding for mobile */
+      margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+  .content-container {
+      grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+  .content-box {
+      padding: 15px; /* Adjust padding for boxes */
+  }
+  .content-title {
+      font-size: 1.2rem; /* Smaller title font for mobile */
+  }
+  .content-text {
+      font-size: 0.9rem; /* Smaller text font for mobile */
+  }
+  .know-more1-btn {
+      font-size: 0.8rem; /* Button font size for mobile */
+      padding: 8px 15px; /* Slightly larger padding for touch targets */
+  }
+}   

@@ -1,0 +1,249 @@
+.supply-chain-wrapper {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.supply-chain-header {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.meetheader-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+/* Black overlay on the header image */
+.supply-chain-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* 20% black overlay */
+  z-index: 1;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* Content Section */
+.supply-chain-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.supply-chain-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5a3d1b; /* Brownish color */
+}
+
+/* Step Section */
+.supply-chain-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.supply-chain-step {
+  background-color: #f8d774; /* Yellowish background */
+  border: 2px solid #dab349;
+  border-radius: 10px;
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.supply-chain-step h3 {
+  font-size: 1.5rem;
+  color: #5a3d1b;
+}
+
+.supply-chain-step p {
+  font-size: 1rem;
+  color: #3c3c3c;
+}
+
+/* Meet the Farmer Section */
+.meetfarmer-info {
+  padding: 40px 10%;
+  background-color: #f9f5ef; /* Light background */
+  text-align: center;
+}
+
+.meetfarmer-heading {
+  font-size: 2.5rem;
+  color: #5a3d1b;
+  margin-bottom: 20px;
+}
+
+.meetfarmer-paragraph {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #3c3c3c;
+}
+
+.impacts-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.impacts-cards {
+  width: 45%;
+  padding: 20px;
+  background-color:#04D939;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.farmer-highlight {
+  background-image: linear-gradient(to right, #d6f5d6, #f5e0cc);
+  padding: 60px 5%;
+  margin-top: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.farmer-highlight-content {
+  max-width: 900px;
+}
+
+.farmer-highlight-heading {
+  font-size: 2.8rem;
+  color: #215a3a;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.farmer-highlight-paragraph {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.farmer-gallery {
+  padding: 50px 5%;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.gallery-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #215a3a;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+  transform: scale(1.2); /* Enlarge image on hover */
+  z-index: 2; /* Bring the hovered image to the front */
+}
+
+/* Blur effect for non-hovered images */
+.gallery-grid:hover .gallery-item:not(:hover) img {
+  filter: blur(5px);
+  opacity: 0.6;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .supply-chain-step {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-chain-step {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px; /* Adjust padding for mobile */
+      margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+  .content-container {
+      grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+  .content-box {
+      padding: 15px; /* Adjust padding for boxes */
+  }
+  .content-title {
+      font-size: 1.2rem; /* Smaller title font for mobile */
+  }
+  .content-text {
+      font-size: 0.9rem; /* Smaller text font for mobile */
+  }
+  .know-more1-btn {
+      font-size: 0.8rem; /* Button font size for mobile */
+      padding: 8px 15px; /* Slightly larger padding for touch targets */
+  }
+}   
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #04D939;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #03c829;
+}

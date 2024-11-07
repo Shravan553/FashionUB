@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light gray background for better contrast */
+    color: #333; /* Dark text color for readability */
+}
+
+.yellow-potatoes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between logo and navbar */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space out items */
+    align-items: center;
+    padding: 160px;
+    background-color: #080807; /* Dark brown header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px; /* Restrict header width */
+    margin: 0 auto; /* Center the header on larger screens */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navbar items to the right */
+    gap: 20px; /* Adds spacing between navbar items */
+    width: auto; /* Prevents the navbar from taking full width */
+    margin-right: 20px; /* Adds space from the right side */
+}
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #f59e0b; /* Amber color on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Restricting the maximum width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-content {
+    max-width: 55%; /* Reducing to prevent overflow */
+}
+
+.titles {
+    font-size: 2.5em;
+    margin: 0;
+    color: #6b4f4f; /* Deep brown */
+}
+
+.subtitle {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #7a7a7a; /* Gray */
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #9a9a9a; /* Lighter gray */
+}
+
+.description {
+    font-size: 1em;
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.see-details-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f59e0b; /* Amber */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 200px; /* Restrict button width */
+    margin: 20px 0;
+}
+
+.see-details-btn:hover {
+    background-color: #d47c00; /* Darker amber */
+    transform: scale(1.05);
+}
+
+/* Image Styles */
+.image-content {
+    display: flex;
+    justify-content: center;
+    max-width: 40%;
+}
+
+.potato-image {
+    width: 100%;
+    max-width: 300px; /* Reduced from 350px */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure it doesn’t stretch too wide */
+}
+
+/* Details Section */
+.details-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4e2c1; /* Light beige */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details-title {
+    font-size: 1.8em;
+    color: #4a4a4a; /* Dark gray */
+    margin-top: 20px;
+}
+
+.details-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Fun GIF Section */
+.fun-gif-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.cooking-gif {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+
+    .potato-image {
+        max-width: 250px; /* Adjust image size on mobile */
+    }
+
+    .image-gallery img {
+        width: 80%; /* Reduce gallery image size on mobile */
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .see-details-btn {
+        width: 100%;
+        padding: 15px;
+        max-width: 250px; /* Cap button width on mobile */
+    }
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+p1{
+  font-size: 20px;
+  color: #2BBA2E;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%; /* Ensure it takes full width */
+}
+
+.subtitle {
+  font-size: 10.5px; /* Bigger size for the subtitle */
+  font-weight: bold; /* Make it bold, if needed */
+  color: #333; /* Subtitle color */
+}
+body{
+  background: hsl(0, 100%, 100%);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.container{
+  padding-left: 0%;
+  padding-right: 0%;
+}
+.btn{
+  background: #FFF;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn img{
+  width: 20px;
+  margin-left: 10px;
+}
+.btn.dark-btn{
+  background: #212EA0;
+  color: #fff;
+}
+/* ----- media query ----------- */
+@media (max-width: 1200px){
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  /* Default styles for desktop */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  .btn{
+    padding: 14px 22px;
+  }
+  @media (max-width: 768px) {
+    /* For smaller screens like tablets and mobile phones */
+    /* Adjust the image width for mobile */
+    .content-image {
+      width: 100%; /* Make image take up the full width of the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+    /* Adjust the content-box for better spacing */
+    .content-box {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center items */
+      text-align: center;
+    }
+    .content-left, .content-right {
+      padding: 0; /* Remove extra padding on mobile for better space usage */
+    }
+    /* Adjust content text */
+    .content-title {
+      font-size: 1px; /* Slightly reduce the title font size on mobile */
+    }
+    .content-text, .content-info {
+      font-size: 16px; /* Reduce text size for mobile */
+    }
+    /* Adjust hero section for smaller screens */
+    .hero-section {
+      height: 300px; /* Reduce height for smaller screens */
+    }
+    .hero-title {
+      font-size: 36px; /* Reduce title size */
+    }
+    .hero-subtitle {
+      font-size: 18px; /* Reduce subtitle size */
+    }
+  }
+}

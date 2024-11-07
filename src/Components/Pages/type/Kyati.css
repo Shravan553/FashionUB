@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light gray background for better contrast */
+    color: #333; /* Dark text color for readability */
+}
+
+.kyati-potatoes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image Styles */
+.image-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the image horizontally */
+}
+
+.potato-image {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Set max width for responsiveness */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Best Served List Image Styles */
+.best-served-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.best-served-image {
+    width: 30px; /* Set width for icons */
+    height: 30px; /* Set height for icons */
+    margin-right: 5px; /* Space between image and text */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-direction: column; /* Stack logo and navbar vertically */
+    align-items: center; /* Center the items */
+    padding: 20px; /* Adjusted padding for header */
+    background-color: #080807; /* Warm brown color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%; /* Ensures the header takes full width */
+}
+
+/* Navbar and Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between logo and navbar */
+}
+
+.navbar {
+    display: flex; /* Align navbar items in a row */
+    justify-content: center; /* Center navbar items */
+    width: 100%; /* Make navbar take the full width of the header */
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    max-width: 60%;
+}
+
+.titles {
+    font-size: 3em;
+    margin: 0;
+    color: #6b4f4f; /* Deep brown */
+}
+
+.subtitle {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #7a7a7a; /* Gray */
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #9a9a9a; /* Lighter gray */
+}
+
+.description {
+    font-size: 1em;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.see-details-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f59e0b; /* Amber */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-details-btn:hover {
+    background-color: #d47c00; /* Darker amber */
+    transform: scale(1.05);
+}
+
+/* Details Section Styles */
+.details-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e2d4c0; /* Soft beige */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-title {
+    font-size: 2em;
+    color: #4a4a4a; /* Dark gray */
+    margin-top: 20px;
+}
+
+.details-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .text-content {
+        max-width: 100%; /* Full width on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Full width for images on mobile */
+        max-width: none; /* Remove max width */
+        margin: 10px 0; /* Space between images */
+    }
+}

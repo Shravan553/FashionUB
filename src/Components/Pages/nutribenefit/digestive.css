@@ -1,0 +1,188 @@
+/* Digestive Container */
+.digestive-container {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  overflow-x: hidden; /* Avoid horizontal scroll */
+}
+
+.digestive-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Change from 100vh to auto for responsiveness */
+  position: relative; /* For positioning the overlay */
+  flex-direction: column; /* Stack vertically on small screens */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.digestive-hero-img {
+  width: 100%; /* Keep the width full */
+  height: 100vh; /* Allow height to adjust automatically */
+  max-height: 100vh; /* Optional: set a max height for larger screens */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  border-radius: 10px; /* Add rounded corners to the image */
+}
+
+/* Overlay Styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  display: flex; /* Center content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  text-align: center; /* Center the text */
+}
+
+/* Card Section */
+.card-section {
+  padding: 4rem 2rem; /* Add padding for spacing */
+  background-color: #eef2f3; /* Light background for contrast */
+  text-align: center; /* Center the text */
+}
+
+/* Card Container */
+.card-containers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Show 4 columns on larger screens */
+  gap: 30px; /* Space between cards */
+  max-width: 1800px; /* Limit the width of the container */
+  margin: 0 auto; /* Center the container */
+  justify-items: center; /* Center cards in each grid cell */
+}
+
+/* Aiding Digestion Section */
+.aiding-digestion {
+  padding: 4rem; /* Responsive padding */
+  background-color: #f4f4f9;
+}
+
+/* Digestive Box */
+.digestive-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem; /* Responsive padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 6px solid #4caf50; /* Green border for a fresh look */
+}
+
+/* Digestive Title */
+.digestive-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem; /* Larger title size */
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem; /* Responsive margin */
+}
+
+/* Digestive Info */
+.digestive-info {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem; /* Increased for better readability */
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(135deg, #a433f5, #c71585); /* Gradient background for the cards */
+  color: #fff; /* White text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Responsive inner spacing */
+  box-shadow: 0 4px 16px rgba(5, 5, 5, 0.2); /* Enhanced shadow for depth */
+  text-align: center; /* Center align text */
+  height: 200px; /* Fixed height for square shape */
+  width: 90%; /* Responsive width */
+  max-width: 350px; /* Limit width for larger screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+/* Card Title Styles */
+.card h3 {
+  margin-bottom: 0.5rem; /* Space below the title */
+  font-weight: bold; /* Make the title bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .digestive-hero {
+   flex-direction: column;
+    height: 50vh; /* Allow height to adjust for content */
+  }
+
+  .digestive-hero-img {
+    max-height: 90vh; /* Optional: Adjust max-height for mobile view */
+  }
+  /* Detailed Section: How Potatoes Aid Digestion */
+  .digestive-detailss {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 2rem; /* Adjusted for smaller screens */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin: 1rem 0; /* Margin to separate from other sections */
+  }
+  
+  .details-cards {
+    max-width: 90%; /* Responsive max width */
+    margin: 0 auto; /* Center the section */
+    text-align: center; /* Center align text */
+  }
+  
+  .details-cards h3 {
+    font-size: 24px; /* Adjusted font size for heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #4caf50; /* Green color for heading */
+  }
+  
+  .details-cards p {
+    font-size: 1rem; /* Standard font size for paragraph */
+    line-height: 1.6; /* Improved line spacing for readability */
+    color: #555; /* Darker text color for contrast */
+  }
+
+  /* Adjust card size on smaller screens */
+  .card {
+    height: auto; /* Allow height to adjust for content */
+    width: 100%; /* Allow width to adjust for content */
+  }
+
+  /* Adjust card container to show 1 column on smaller screens */
+  .card-containers {
+    grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+    padding: 10px; /* Adjust padding for mobile */
+    margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+
+  .content-container {
+    grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+
+  .content-box {
+    padding: 15px; /* Adjust padding for boxes */
+  }
+
+  .content-title {
+    font-size: 1.2rem; /* Smaller title font for mobile */
+  }
+
+  .content-text {
+    font-size: 0.9rem; /* Smaller text font for mobile */
+  }
+}

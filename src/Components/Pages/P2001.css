@@ -1,0 +1,51 @@
+.potato-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .potato-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .potato-description {
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .buy-button,
+  .sell-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .buy-button {
+    background-color: #28a745; /* Green for buy */
+    color: white;
+  }
+  
+  .sell-button {
+    background-color: #dc3545; /* Red for sell */
+    color: white;
+  }
+  
+  .buy-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .sell-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  

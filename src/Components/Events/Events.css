@@ -1,0 +1,86 @@
+/* Full screen styling */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    width: auto;
+}
+
+
+/* Light green top and bottom borders */
+.events-header, .events-footer {
+    background-color: #04D939; /* Light green */
+    height: 20px;
+}
+
+/* Event slider container */
+.EVsliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Buttons for navigation */
+.EVbutton {
+    background-color: #001542;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.EVbutton:hover {
+    background-color: #45a049;
+}
+
+/* Event card styling */
+.EVcard {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* Event title styling */
+.EVtitle {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+/* Event date styling */
+.EVdate {
+    font-size: 28px;
+    color: #A48650;
+}
+
+/* Event description styling */
+.EVdescription {
+    font-size: 29px;
+    margin-top: 10px;
+    color: #45a049;
+}
+
+/* Ensure the layout is responsive and looks good on all screen sizes */
+@media (max-width: 768px) {
+    .EVsliderContainer {
+        flex-direction: column;
+    }
+
+    .EVbutton {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .EVcard {
+        margin: 10px 0;
+    }
+}

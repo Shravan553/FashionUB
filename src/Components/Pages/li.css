@@ -1,0 +1,107 @@
+.potato-potato-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(164, 134, 80);
+}
+
+.potato-title {
+  color: black;
+  padding: 5px;
+}
+
+.potato-subtitle {
+  color: green;
+}
+
+.potato-image-container {
+  position: relative;
+  height: 400px; /* Fixed height for consistency */
+  margin-bottom: 2rem; /* Space below for smaller screens */
+  overflow: hidden;
+}
+
+.potato-main-image {
+  width: 100%;
+  height: 100%; /* Ensure the image fills the container */
+  border-radius: 1rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.potato-main-image:hover {
+  transform: scale(1.05);
+}
+
+.potato-content-wrapper {
+  margin-top: 2rem;
+}
+
+.potato-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.potato-gradient-bar {
+  height: 0.25rem;
+  width: 4rem;
+  background: linear-gradient(90deg, rgba(0, 21, 66, 0.5) 50%, rgba(4, 217, 57, 0.5) 50%);
+  margin-bottom: 1.5rem;
+}
+
+.potato-paragraph {
+  margin-bottom: 1rem;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.potato-button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.potato-button {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, transform 0.3s;
+  color: white;
+}
+
+.potato-about-us {
+  background: linear-gradient(90deg, #22ff00, #1b00b3);
+}
+
+.potato-about-us:hover {
+  background-color: #10b981;
+}
+
+.potato-our-team {
+  background: linear-gradient(90deg, #22ff00, #1b00b3);
+}
+
+.potato-our-team:hover {
+  background-color: #2563eb;
+}
+
+@media (min-width: 768px) {
+  .potato-potato-section {
+    flex-direction: row;
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center the entire section */
+  }
+
+  .potato-image-container {
+    width: 50%; /* Half width for image */
+    padding-right: 1rem; /* Add space to the right */
+  }
+
+  .potato-content-wrapper {
+    width: 50%; /* Half width for content */
+    padding-left: 1rem; /* Add space to the left */
+    margin-top: 0; /* Remove top margin in row layout */
+  }
+}

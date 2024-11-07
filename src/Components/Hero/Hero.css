@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Base Container Styling */
+.potato-insights-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.hero{
+    width:auto; /* Full viewport width */
+    height: 93.6vh; /* Full viewport height minus navbar height (adjust as needed) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #F4F4F4; /* Subtle background */
+    margin-top: 2px; /* Offset by navbar height */
+    
+}
+/* Slider Wrapper Styling */
+.hero-slider {
+    width: 100%;
+    height: 95vh; /* Fixed height for consistent display */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Slide Styling */
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: visible;
+}
+
+/* Ensure active slide is displayed */
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slide Content Styling */
+.hero-text {
+    text-align: center;
+    max-width: 90%;
+    color: #fff;
+    animation: fadeIn 1.5s ease-out;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #04D939;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto;
+    color: #070707;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Slide Navigation Controls */
+.slider-controls {
+    position: absolute;
+    bottom: 30px; /* Adjusted to position dots consistently */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid #04D939;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slider-dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
+/* Mobile Adjustments */
+@media (max-width: 850px) {
+    .hero-slider {
+        height: 75vh; /* Reduced height for smaller screens */
+    }
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-text h1 {
+        font-size: 28px;
+        max-width: 400px;
+    }
+    .hero-text p {
+        font-size: 14px;
+    }
+    .slider-dot {
+        width: 10px;
+        height: 10px;
+    }
+}

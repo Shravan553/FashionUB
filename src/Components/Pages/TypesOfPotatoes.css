@@ -1,0 +1,592 @@
+/* Dark Background */
+body {
+  background-color: #000;
+  color: #fff;
+  width:auto;
+  font-family: 'Roboto', sans-serif; /* Body font */
+}
+
+.potato-slider-container {
+  width: auto;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.info-card {
+  background-color: white;
+  padding: 2rem;
+  width:auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a card effect */
+  border-radius: 10px; /* Rounded corners for the card */
+  max-width: 800px; /* Limits the card width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem auto; /* Center the card and add spacing */
+}
+
+.info-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+.card-section {
+width:auto;
+  display: flex; /* Use flexbox for card layout */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  margin: 2rem 0; /* Space around card section */
+}
+
+/* Info Card Styles */
+.info-cards {
+  width:auto;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a card effect */
+  border-radius: 10px; /* Rounded corners for the card */
+  max-width: 100%; /* Allows full width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem 0; /* Space between cards */
+  width: 100%; 
+  justify-content: center;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* Ensure full width for responsiveness */
+}
+
+
+/* Card Section Styles */
+.card-sections {
+  display: flex; /* Use flexbox for card layout */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: stretch; /* Stretch cards to fill the width */
+  margin: 2rem 0; /* Space around card section */
+  width: 100%; /* Ensure full width for card section */
+}
+
+
+.card-contents {
+  display: flex; /* Create a flex container for the title and info */
+  justify-content: space-between; /* Space between title and info */
+  align-items: center; /* Center items vertically */
+}
+
+.card-titles {
+  flex: 1; /* Take up space proportionally */
+  margin-right: 1rem; /* Space between title and info */
+}
+
+.card-infos {
+  flex: 2; /* Take up more space compared to title */
+}
+/* Slider Box */
+.slider-box {
+  background-color: #0e0c0c; /* Background color for the slider box */
+  padding: 20px; /* Add padding to the slider box */
+  border-radius: 8px; /* Rounded corners for better aesthetics */
+  margin-top: 40px; /* Space for the top section */
+  position: relative; /* Ensures it stays below other sections */
+  z-index: 0; /* Keep it below other sections */
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  overflow: visible;
+}
+
+
+/* Card Style */
+.card {
+  width: 250px; /* Set width for the card */
+  height: 350px; /* Set height for the card */
+  background-color: #f0e68c; /* Yellow color for the background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* General Section Styles */
+.potato-varieties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.potato-card {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  perspective: 1000px; /* Perspective for the flip effect */
+  cursor: pointer;
+}
+
+.potato-content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.potato-card:hover .potato-content {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.potato-front,
+.potato-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back when flipped */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.potato-front {
+  background: linear-gradient(135deg, #04D939, #A48650); /* Red to light red gradient */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.potato-back {
+  background-color: #f3b0b0;
+  transform: rotateY(180deg); /* Position back to be flipped */
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.potato-back p {
+  margin-bottom: 10px;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .potato-varieties {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .potato-varieties {
+    gap: 10px;
+  }
+  .potato-card {
+    width: 100%;
+  }
+}
+
+/* Slider Items */
+.slick-slide {
+  transition: all 0.5s ease;
+  transform: scale(0.8) rotateY(45deg);
+  opacity: 0.3; /* Reduced opacity for more contrast */
+}
+
+.slick-current {
+  transform: scale(1) rotateY(0deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Image Styles */
+.slider-image {
+  width: 100%; /* Full width of the parent container */
+  height: 300px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Maintain aspect ratio while filling the space */
+  border: 2px solid #333; /* Darker border */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Subtle glow */
+}
+
+/* Additional Content Styles */
+.additional-content {
+  padding: 25px; /* Increased padding for a more spacious feel */
+  background-color: #ffffff; /* Light background for better contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  margin-top: 20px; /* Spacing above the section */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */ 
+  color: #000; /* Set text color to black */
+  transition: box-shadow 0.3s ease;
+}
+
+.additional-content:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
+}
+
+.additional-content h2 {
+  color: #000; /* Set heading color to black */
+  font-family: 'Poppins', sans-serif; /* Modern font for headings */
+  font-weight: 700; /* Bold weight for emphasis */
+  font-size: 1.8em; /* Larger heading size for better visibility */
+  margin-bottom: 15px; /* Space below the heading */
+  background-color: #c2cfda; /* Light background to highlight the heading */
+  padding: 10px; /* Padding around the text */
+  border-radius: 8px; /* Smooth rounded edges for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+}
+
+.additional-content ul {
+  list-style-type: disc; /* Disc list style */
+  padding-left: 20px; /* Indentation for the list */
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Cooking Tips Link Styles */
+
+
+/* Additional Content Styles */
+.additional-content li {
+  margin-bottom: 8px; /* Space between list items for clarity */
+}
+
+.additional-content p {
+  margin-top: 15px; /* Space above the paragraph */
+  color: #000; /* Set paragraph text color to black */
+  font-family: 'Roboto', sans-serif; /* Clean font for paragraphs */
+  font-size: 1.1em; /* Slightly larger text for improved readability */
+  line-height: 1.6; /* Increased line height for better clarity */
+}
+
+/* Centered Section Styles */
+.centered-section {
+  text-align: center; /* Center the text */
+  margin: 20px auto; /* Add some margin for spacing */
+  max-width: 800px; /* Limit the width for readability */
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+/* Potato Types Container */
+.potato-types-container {
+  display: flex;
+  flex-wrap: wrap;           /* Allow wrapping of items */
+  justify-content: center;   /* Center items in the container */
+  gap: 20px;                 /* Add consistent space between items */
+  margin: 20px 0;            /* Margin for spacing around the container */
+  padding: 0 10px;           /* Padding to avoid items sticking to the edges */
+}
+
+/* Potato Type Styles */
+.potato-type {
+  text-align: center;        /* Center align the text */
+  margin: 10px;              /* Margin around each potato type */
+  flex: 1 1 180px;           /* Set a flexible size, min width of 180px */
+  max-width: 200px;          /* Limit the maximum width for each potato type */
+  display: flex;             /* Flexbox for vertical alignment */
+  flex-direction: column;    /* Stack image and text vertically */
+  align-items: center;       /* Center-align the image and text */
+  border-radius: 8px;        /* Rounded corners for the entire type container */
+  background-color: #fff;    /* Add a background color for visual separation */
+  padding: 15px;             /* Padding inside each potato type box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like effect */
+}
+
+/* Potato Image Styles */
+.potato-type-item img {
+  width: 80px;                /* Increase image size for better visibility */
+  height: auto;               /* Maintain aspect ratio */
+  border-radius: 8px;         /* Rounded corners for image */
+  margin-bottom: 10px;        /* Space between image and text */
+}
+
+
+/* Adjust the slider item to allow different sizes */
+.slider-item {
+  display: flex; /* Flexbox for vertical alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  justify-content: center; /* Center items */
+  margin: 0 15px; /* Add horizontal margin for spacing */
+}
+
+/* Title Styles */
+.slider-title {
+  font-size: 3rem;
+  color: #f5eeee;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+/* Description Styles */
+.slider-description {
+  font-size: 1rem;
+  color: #bbb; /* Even dimmer for hierarchy */
+  max-width: 300px;
+  margin: 0 auto; /* Center the text */
+}
+.unique-content-section .icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+/* Hide Slick Dots */
+.slick-dots {
+  display: none !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .additional-content {
+      padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .additional-content h2 {
+      font-size: 1.5em; /* Adjusted heading size for mobile */
+  }
+
+  .additional-content p, .additional-content ul {
+      font-size: 1em; /* Adjusted text size for mobile */
+  }
+
+  .potato-types-container {
+      justify-content: center; /* Center items on smaller screens */
+  }
+
+  .potato-type {
+      flex: 1 1 45%;         /* Increase size on tablet screens */
+      max-width: 250px;      /* Adjust max-width for better spacing */
+  }
+
+
+  .potato-image {
+      max-width: 70%; /* Limit image size to 70% of its container */
+  }
+}
+@media (max-width: 768px) {
+  .info-card {
+    padding: 1.5rem; /* Reduced padding for mobile */
+  }
+
+  .slider-title {
+    font-size: 2.5rem; /* Smaller title size for mobile */
+  }
+
+  .slider-description {
+    font-size: 0.9rem; /* Smaller description for mobile */
+  }
+
+  .additional-content h2 {
+    font-size: 1.5em; /* Smaller heading for mobile */
+  }
+
+  .potato-type {
+    flex: 1 1 150px; /* Reduce minimum width for potato types */
+    margin: 5px; /* Reduced margin for potato types */
+  }
+
+  .slider-image {
+    height: 200px; /* Reduced height for images on mobile */
+  }
+}
+
+/* Container for the hero section */
+.tyhero-section {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Adjust the height as per your design */
+  overflow: hidden;
+}
+
+.tyhero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  opacity: 0.8; /* Optional: you can set opacity to make the image slightly transparent */
+}
+
+.tyhero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:800px;
+  height:100px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+  border-radius: 10px;
+}
+
+.tyhero-overlay h1 {
+  font-size: 3rem; /* Adjust the font size for the title */
+  font-weight: bold;
+}
+
+.tyhero-overlay p {
+  font-size: 1.2rem; /* Adjust the font size for the description */
+  margin-top: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .tyhero-section {
+    height: 300px; /* Adjust the height for smaller screens */
+  }
+
+  .tyhero-overlay h1 {
+    font-size: 2rem; /* Adjust the font size for smaller screens */
+  }
+
+  .tyhero-overlay p {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+  }
+}
+.potato-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px; /* space between cards */
+  justify-content: center;
+  padding: 20px;
+}
+
+.potato-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow animation */
+  text-align: center;
+  padding: 15px; /* Padding inside the card */
+}
+
+.potato-card:hover {
+  transform: translateY(-10px); /* Lift the card a little more on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.potato-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: rounded corners for the image */
+  transition: transform 0.3s ease; /* Image scale on hover */
+}
+
+.potato-card:hover .potato-card-image {
+  transform: scale(1.05); /* Slight zoom effect on image hover */
+}
+
+.potato-card-info {
+  padding: 10px;
+}
+
+.potato-card-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.potato-card-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.potato-card-info button {
+  background-color: #3e8e41;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.potato-types-section {
+  background: linear-gradient(45deg, #04D939, #A48650); /* Vibrant gradient background */
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.potato-types-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.potato-types-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Heading shadow for depth */
+  animation: fadeIn 1s ease-out;
+}
+
+.potato-types-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 auto;
+  width: 80%;
+  color: #f5f5f5;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+  max-width: 800px;
+  animation: slideIn 1.5s ease-out;
+}
+
+.potato-types-section:hover {
+  background: linear-gradient(45deg,  #A48650, #04D939); /* Darker gradient on hover */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.potato-card-info button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Slight scale on button hover */
+}
+

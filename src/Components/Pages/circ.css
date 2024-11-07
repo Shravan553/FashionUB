@@ -1,0 +1,88 @@
+/* Rotating Cube Styles */
+.cube-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the cube is centered vertically */
+    margin: 0;
+    background-color: transparent; /* Transparent background */
+}
+
+.cube {
+    position: relative;
+    width: 200px; /* Cube width */
+    height: 200px; /* Cube height */
+    transform-style: preserve-3d;
+    margin: auto;
+    animation: rotateCube 10s infinite linear; /* Apply rotation animation */
+}
+
+/* Cube face styles */
+.face {
+    position: absolute;
+    width: 200px; /* Match the width of the cube */
+    height: 200px; /* Match the height of the cube */
+    background-size: cover; /* Ensure the image covers the face */
+    background-position: center; /* Center the image */
+    border: 1px solid #ccc; /* Optional: border for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add background images to each face */
+.front  { background-image: url('../../assets/bypro.jpg'); transform: translateZ(100px); }
+.back   { background-image: url('../../assets/pot.png'); transform: rotateY(180deg) translateZ(100px); }
+.left   { background-image: url('../../assets/expo.jpg'); transform: rotateY(-90deg) translateZ(100px); }
+.right  { background-image: url('../../assets/flo.jpg'); transform: rotateY(90deg) translateZ(100px); }
+.top    { background-image: url('../../assets/supply.jpg'); transform: rotateX(90deg) translateZ(100px); }
+.bottom { background-image: url('../../assets/cold.png'); transform: rotateX(-90deg) translateZ(100px); }
+
+/* Keyframe animation for rotating the cube */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #03c829;
+  }

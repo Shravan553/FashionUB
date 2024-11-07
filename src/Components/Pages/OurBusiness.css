@@ -1,0 +1,133 @@
+.our-business-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .business-header {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .business-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the header while maintaining aspect ratio */
+    filter: brightness(50%); /* Adjust the brightness */
+  }
+  
+  .header-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .business-header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .business-header p {
+    font-size: 1.5rem;
+  }
+  
+  .business-intro, .business-services, .business-why-choose-us, .business-contact {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .business-intro h2, .business-services h2, .business-why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .business-services .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .service-item {
+    flex: 1 1 calc(50% - 20px);
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .service-item img {
+    width: 100%; /* Ensures image scales to the container width */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintains aspect ratio while covering the container */
+    border-radius: 10px; /* Rounded corners for a polished look */
+  }
+  
+  .service-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .service-item p {
+    font-size: 1rem;
+  }
+  
+  .business-why-choose-us ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .business-why-choose-us li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .business-contact {
+    text-align: center;
+  }
+  
+  .return-home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .return-home-button:hover {
+    background-color: #0056b3;
+  }
+  @media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   

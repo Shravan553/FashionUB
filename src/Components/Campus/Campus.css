@@ -1,0 +1,67 @@
+.campus {
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+    overflow: hidden; /* Hide overflow for animation effect */
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Align items to the start */
+    animation: scroll 20s linear infinite; /* Add animation to the gallery */
+}
+
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+.gallery img {
+    width: 24%;
+    height: 200px; /* Maintain aspect ratio */
+    max-height: 200px; /* Set maximum height */
+    border-radius: 14px;
+    margin-right: 10px; /* Add spacing between images */
+}
+
+/* ------- Media query ------------- */
+@media (max-width: 800px) {
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .gallery img {
+        width: 48%;
+        height: auto;
+        max-height: 150px; /* Adjust maximum height for smaller screens */
+        margin-bottom: 25px;
+    }
+}
+
+/* Keyframe animation for scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move left by 100% of its width */
+    }
+}

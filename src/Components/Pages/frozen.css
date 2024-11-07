@@ -1,0 +1,180 @@
+/* Frozen Hero Section */
+.frozenhero {
+  display: flex; /* Flexbox for side-by-side layout */
+  height: 50vh; /* 50% of the viewport height */
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.frozenhero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: #fefcfc; /* Vibrant background color */
+  color:#04D939; /* White text color */
+  text-align: center;
+  padding: 0 20px;
+}
+.frozen-description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333;
+}
+
+.frozen-description-content {
+  max-width: 1200px;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.frozen-description-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #04D939; /* A fresh green color for vibrancy */
+  margin-bottom: 20px;
+}
+
+.frozen-description-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .frozen-description-title {
+    font-size: 1.8rem;
+  }
+
+  .frozen-description-text {
+    font-size: 1rem;
+  }
+}
+
+.frozenhero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.frozenhero-image-container {
+  flex: 1;
+  position: relative;
+}
+
+.frozenhero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+  opacity: 0.7; /* Slight opacity for a subtle effect */
+}
+
+/* Optional hover effect for hero image */
+.frozenhero-image-container:hover .frozenhero-image {
+  opacity: 1; /* Remove opacity on hover for a clearer image */
+}
+
+/* Products Container */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  padding-top: 20px; /* Adjusted padding */
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+  padding: 0 10px;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .frozenhero {
+    flex-direction: column; /* Stack the content on smaller screens */
+    height: 60vh; /* Adjust the height */
+  }
+
+  .frozenhero-content {
+    font-size: 2rem; /* Adjust font size for mobile */
+    padding: 20px;
+  }
+
+  .frozenhero-title {
+    font-size: 2.5rem;
+  }
+
+  .frozenhero-image {
+    height: 50%; /* Make image take less height on mobile */
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .frozenhero-content {
+    padding: 10px;
+  }
+
+  .frozenhero-title {
+    font-size: 1.8rem;
+  }
+
+  .product-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+}

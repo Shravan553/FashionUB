@@ -1,0 +1,797 @@
+.imune-container {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  overflow-x: hidden; /* Avoid horizontal scroll */
+}
+
+.imune-hero {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  height: 80vh;
+  position: relative; /* Ensures proper positioning of the ::before overlay */
+  text-align: center; /* Center the text horizontally */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+
+
+
+
+/* General Container */
+.imune-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* Hero Text */
+.heros-text {
+  z-index: 2;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px); /* Glassmorphism effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out; /* Add animation for hero text */
+}
+
+.heros-text h1 {
+  font-size: 3.5rem;
+  color: #ffdd00;
+  margin-bottom: 15px;
+}
+
+.heros-text p {
+  font-size: 1.5rem;
+  color: #e5e5e5;
+}
+
+/* Hero Image */
+.heros-image {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.potato-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px); /* Blurred image */
+  opacity: 0.7;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out; /* Smooth scaling effect */
+}
+
+/* Immune System Section */
+.immune-system {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Soft gradient background */
+  text-align: center;
+}
+
+.immune-system h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.immune-system h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ffdd00;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  width: 22%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 221, 0, 0.2), transparent);
+  z-index: 0;
+  transform: rotate(45deg);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  color: #ffdd00;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  z-index: 1;
+  position: relative;
+}
+
+/* Animation for Hero Section */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  .heros-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .heros-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Immune Facts Section */
+.immune-facts {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa); /* Light, soft gradient */
+  text-align: center;
+}
+
+.immune-facts h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.immune-facts h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ff6f61;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.facts-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fact-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fact-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  flex-basis: 22%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  z-index: 1;
+}
+
+.fact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.fact-card i {
+  font-size: 3rem;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+.fact-card h3 {
+  font-size: 1.8rem;
+  color: #e23d3d;
+  margin-bottom: 10px;
+}
+
+.fact-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Immune Response Section */
+.immune-response {
+  padding: 60px 20px;
+  background-color: #f0f8ff;
+}
+
+.response-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.response-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.response-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.response-text h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #ff6f61;
+  bottom: -5px;
+  left: 0;
+}
+
+.response-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.response-image {
+  flex: 1;
+}
+
+.response-image .immune-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.response-image .immune-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .response-container {
+    flex-direction: column;
+  }
+
+  .response-text, .response-image {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Potato Importance Section */
+.potato-importance {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e6f7ff, #f9f9f9); /* Gradient background for depth */
+  text-align: center;
+  border-top: 5px solid #4caf50; /* Add a colored border for emphasis */
+}
+
+.importance-card {
+  max-width: 800px; /* Set a maximum width for the card */
+  margin: 0 auto; /* Center the card */
+  padding: 30px;
+  background-color: #fff; /* White background for the card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.importance-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.importance-card h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Added letter spacing for better readability */
+  font-weight: 600; /* Slightly bolder font */
+}
+
+.importance-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8; /* Increased line height for better readability */
+  margin-bottom: 15px;
+  padding: 0 10px; /* Side padding for text */
+}
+
+/* Add subtle text shadow to paragraph for depth */
+.importance-card p {
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7); /* Subtle text shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .importance-card {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .importance-card h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .importance-card p {
+    font-size: 1rem; /* Smaller paragraph text on mobile */
+  }
+}
+
+
+/* Animations for the icons */
+.fact-card i {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fact-card:hover i {
+  color: #00ff4c;
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+@media (max-width: 768px) {
+  .fact-card {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fact-card {
+    flex-basis: 100%;
+  }
+}
+
+.heros-text h1 {
+  font-size: 3.5rem; /* Make the text larger */
+  color: #0c0c0b; /* Highlight the title in a bright yellow */
+  margin-bottom: 20px;
+  text-align: center; /* Ensure text is centered */
+}
+
+.heros-text p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center; /* Ensure text is centered */
+}
+
+.heros-image {
+  flex: 1;
+  z-index: 1; /* Ensure image is above the overlay */
+  display: flex;
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+}
+
+.potato-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px); /* Blur effect for the image */
+  opacity: 0.8; /* Slightly lower opacity to enhance the blurred effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .imune-hero {
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+  }
+
+  .heros-text, .heros-image {
+    flex: none; /* Remove flex behavior on smaller screens */
+    width: 100%;
+  }
+
+  .potato-hero-img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px; /* Adjust padding for mobile */
+      margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+  .content-container {
+      grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+  .content-box {
+      padding: 15px; /* Adjust padding for boxes */
+  }
+  .content-title {
+      font-size: 1.2rem; /* Smaller title font for mobile */
+  }
+  .content-text {
+      font-size: 0.9rem; /* Smaller text font for mobile */
+  }
+  .know-more1-btn {
+      font-size: 0.8rem; /* Button font size for mobile */
+      padding: 8px 15px; /* Slightly larger padding for touch targets */
+  }
+}   
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #04D939;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #03c829;
+}
+
+
+/* Global Container */
+.imune-container {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  overflow-x: hidden; /* Avoid horizontal scroll */
+}
+
+/* Hero Section */
+.imune-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(0, 0, 0, 0.7));
+}
+
+.imune-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+.heros-text {
+  flex: 1;
+  padding: 20px;
+  z-index: 2;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.heros-text h1 {
+  font-size: 3.5rem;
+  color: #ffdd00;
+  margin-bottom: 15px;
+}
+
+.heros-text p {
+  font-size: 1.5rem;
+  color: #e5e5e5;
+}
+
+.potato-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  opacity: 0.7;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Immune System Section */
+.immune-system {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+  text-align: center;
+}
+
+.immune-system h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.immune-system h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ffdd00;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  width: 22%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  color: #ffdd00;
+  margin-bottom: 10px;
+}
+
+/* Hero Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Cards */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  .heros-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .heros-text p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Immune Facts Section */
+.immune-facts {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+  text-align: center;
+}
+
+.immune-facts h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.immune-facts h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ff6f61;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.facts-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fact-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  flex-basis: 22%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.fact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.fact-card i {
+  font-size: 3rem;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+.fact-card:hover i {
+  color: #00ff4c;
+  transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .fact-card {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fact-card {
+    flex-basis: 100%;
+  }
+}
+
+/* Potato Importance Section */
+.potato-importance {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e6f7ff, #f9f9f9);
+  text-align: center;
+  border-top: 5px solid #4caf50;
+}
+
+.importance-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.importance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.importance-card h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.importance-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .importance-card {
+    padding: 20px;
+  }
+
+  .importance-card h2 {
+    font-size: 2rem;
+  }
+
+  .importance-card p {
+    font-size: 1rem;
+  }
+}

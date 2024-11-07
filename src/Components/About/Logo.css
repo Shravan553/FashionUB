@@ -1,0 +1,48 @@
+.logo-sliders {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logo-sliders h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .logo-rows {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .logo-tracks {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite; /* Adjust speed as needed */
+  }
+  
+  .logos {
+    width: 200px;
+    height:200px;
+    margin: 0 20px;
+  }
+  
+  /* Keyframes for endless left-to-right scroll */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); /* Start at the beginning of the track */
+    }
+    100% {
+      transform: translateX(-50%); /* Move halfway through the track */
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .logos {
+      width: 100px;
+    }
+  }

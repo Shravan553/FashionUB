@@ -1,0 +1,269 @@
+
+
+.market-image {
+  width: 100%; /* Full width of the container */
+  height: 580px; /* Fixed height */
+  margin: 20px 0; /* Space around */
+  object-fit: cover; /* Cover the area without distortion */
+  display: block; /* Behaves like a block element */
+  border: 2px solid #50f77c; /* Optional border */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.potato-images-container {
+  display: flex;
+  flex-direction: column; /* Stacked vertically */
+  align-items: center; /* Center items */
+}
+
+.potato-item {
+  display: flex; /* Flex for row arrangement */
+  align-items: center; /* Center align vertically */
+  margin: 20px 0; /* Spacing between items */
+  width: 100%; /* Full width */
+  max-width: 1000px; /* Maximum width */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.potato-info-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid #50f77c;
+  border-radius: 5px;
+  padding: 15px; /* Padding for the row */
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+  width: 100%; /* Full width */
+}
+
+.potato-info-row:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.potato-image {
+  width: 120px; /* Adjust for larger images */
+  height: auto; /* Keep aspect ratio */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.potato-details {
+  flex: 1; /* Allow details to take available space */
+  text-align: left;
+}
+
+.potato-name {
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+  margin: 0;
+  color: #FF6347; /* Desired color */
+}
+
+.potato-description {
+  font-size: 16px; /* Increased font size */
+  color: #666;
+  margin: 5px 0;
+}
+
+.potato-buttons {
+  display: flex;
+  flex-direction: row; /* Arrange buttons in a row */
+  gap: 25px; /* Space between buttons */
+}
+
+.buy-button,
+.sell-button {
+  padding: 10px 15px; /* Button padding */
+  border: none;
+  border-radius: 6px;
+  border-color: #25D366;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  transition: background-color 0.3s ease;
+}
+
+.buy-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.sell-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.sell-button:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+.info-section {
+  margin-top: 20px;
+}
+
+.headingpot {
+  font-size: 32px; /* Increase font size */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray color */
+  margin: 20px 0; /* Margin for spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align */
+}
+
+.headingpot:hover {
+  color: #4CAF50; /* Change color on hover */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  border-color: #25D366;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%; /* Make it responsive */
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  justify-content: center; /* Center buttons */
+  margin: 15px 0; /* Margin around buttons */
+}
+
+.call-button,
+.whatsapp-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  transition: background-color 0.3s ease;
+}
+
+.call-button {
+  background-color: #007BFF; /* Blue */
+  color: white;
+}
+
+.whatsapp-button {
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+}
+
+.call-button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851; /* Darker green */
+}
+
+.close-popup {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc; /* Gray */
+  cursor: pointer;
+  margin-top: 10px; /* Space above */
+  display: block; /* Full width */
+  width: 100%; /* Full width */
+}
+
+.close-popup:hover {
+  background-color: #aaa; /* Darker gray */
+}
+
+.share-button {
+  padding: 10px 15px; /* Same padding as other buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  background-color: #1DA1F2; /* Twitter Blue */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: #0d94e5; /* Darker blue */
+}
+
+.owner-details {
+  margin: 15px 0; /* Space between description and owner details */
+  font-size: 16px; /* Font size for owner details */
+  color: #333; /* Default color */
+}
+
+.owner-name, .owner-phone, .owner-email {
+  margin: 5px 0; /* Spacing */
+  font-family: 'Arial', sans-serif; /* Font family */
+  line-height: 1.5; /* Line height */
+}
+
+.owner-name strong,
+.owner-phone strong,
+.owner-email strong {
+  color: black; /* Color for strong text */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .market-image {
+    height: 400px;
+    width:auto; /* Reduce height for mobile */
+  }
+
+  .potato-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align */
+  }
+
+  .potato-image {
+    width: 100px; /* Reduce image size */
+    margin-bottom: 10px; /* Space below image */
+  }
+
+  .potato-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+    align-items: center; /* Center align */
+  }
+
+  .headingpot {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .popup {
+    width: 90%; /* Full width for popup */
+  }
+
+  .call-button,
+  .whatsapp-button,
+  .share-button,
+  .close-popup {
+    width: 100%; /* Full width for buttons */
+    margin: 5px 0; /* Space between buttons */
+  }
+}

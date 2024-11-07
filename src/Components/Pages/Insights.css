@@ -1,0 +1,145 @@
+.potato-insights-container {
+    padding: 20px;
+    margin-left: 100px; /* Move container slightly to the left */
+    position:relative;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.content-sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 19px; /* Space between items */
+}
+
+.content-box {
+    background-color: #f9f9f9;
+    border-radius: 9px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* width:10px; */
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Full height for better content display */
+}
+
+.content-box:hover {
+    transform: scale(1.02); /* Slightly larger on hover */
+}
+
+.content-image {
+    /* width: 500%;  */
+    width: 900px;/* Full width for images */
+    height: 210px; /* Fixed height */
+    max-height: 230px; 
+    margin-bottom: 20px; /* Space below the image */
+    object-fit: cover; /* Cover aspect ratio */
+}
+
+.content-title {
+    font-size: 1.5rem; /* Title font size */
+    margin-bottom: 10px; /* Space below title */
+    text-align: center; /* Center the title */
+}
+
+.content-text {
+    font-size: 1rem; /* Text font size */
+    margin-bottom: 20px; /* Space below text */
+    text-align: justify; /* Justified text for readability */
+    flex-grow: 1; /* Allow text to grow */
+}
+
+.know-more1-btn {
+    font-size: 0.8rem; /* Button font size */
+    padding: 5px 10px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background: linear-gradient(90deg, #22ff00, #1b00b3); /* Gradient background */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.2s; /* Smooth background change */
+    align-self: center; /* Center button */
+    margin-top: 15px; /* Space above the button */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.know-more1-btn:hover {
+    background: linear-gradient(90deg, #22ff00, #1b00b3); /* Keep the same gradient on hover */
+}
+
+/* Media Query for devices up to 768px */
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #03c829;
+  }

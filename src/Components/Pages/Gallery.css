@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+/* General Styling */
+.gallery-body {
+  background: linear-gradient(to bottom right, #F8F8F8, #E0E0E0);
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #04D939;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #03c829;
+}
+
+/* Gallery Entry */
+.gallery-entry {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.entry-image {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.entry-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.entry-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.entry-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.entry-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Section Descriptions */
+.section-description {
+  margin: 10px 0 20px;
+  font-size: 25px;
+  color:#A48650;
+  line-height: 1.6;
+}
+
+/* Grid Styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.grid-item {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px #001542;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s, opacity 0.3s;
+  border: 2px solid transparent;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px #001542;
+  border: 5px solid #04D939;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px; /* Adjust padding for mobile */
+      margin-left: 0; /* Remove left margin on mobile for full width */
+  }
+  .content-container {
+      grid-template-columns: 1fr; /* One column layout for mobile */
+  }
+  .content-box {
+      padding: 15px; /* Adjust padding for boxes */
+  }
+  .content-title {
+      font-size: 1.2rem; /* Smaller title font for mobile */
+  }
+  .content-text {
+      font-size: 0.9rem; /* Smaller text font for mobile */
+  }
+  .know-more1-btn {
+      font-size: 0.8rem; /* Button font size for mobile */
+      padding: 8px 15px; /* Slightly larger padding for touch targets */
+  }
+}   
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 images in one row */
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    padding: 0 5px;
+  }
+
+  /* Optional: Make grid items slightly smaller to fit better on mobile */
+  .grid-item {
+    width: 100%;
+    height: 150px; /* Adjust height to fit smaller screens */
+    border-radius: 10px;
+  }
+}
+
+/* For very small screens, like smartphones */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 images in one row */
+    overflow-x: auto;
+  }
+
+  .grid-item {
+    height: 120px; /* Further reduce height if needed */
+  }
+}

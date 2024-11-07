@@ -1,0 +1,110 @@
+/* Common styles for all markers */
+.marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.mapname {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.8em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #A48650, #ffd27f);
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.marker:hover {
+  transform: scale(1.5);
+}
+
+/* Marker text styles */
+.marker-text {
+  visibility: hidden;
+  background-color: rgb(247, 242, 242);
+  color: rgb(10, 1, 1);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -50%;
+  width: max-content;
+  max-width: 200px;
+  font-size: 10px;
+  line-height: 1.4;
+  transition: visibility 0.2s, opacity 0.2s;
+  opacity: 0;
+}
+
+.marker:hover .marker-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Positioning for specific countries */
+
+/* USA marker position */
+.usa {
+  top: 48%;
+  left: 25%;
+}
+
+/* Netherlands marker position */
+.netherlands {
+  top: 40%;
+  left: 50%;
+}
+
+/* UAE marker position */
+.uae {
+  top: 56%;
+  left: 64%;
+}
+
+/* India marker position */
+.india {
+  top: 60%;
+  left: 70%;
+}
+
+/* Australia marker position */
+.australia {
+  top: 79%; /* Adjusted based on Australia's approximate location on the map */
+  left: 84%; /* Adjusted based on Australia's approximate location on the map */
+}
+
+@media only screen and (max-width: 768px) {
+  .potato-insights-container {
+      padding: 10px;
+      margin-left: 0;
+  }
+  .content-container {
+      grid-template-columns: 1fr;
+  }
+  .content-box {
+      padding: 15px;
+  }
+  .content-title {
+      font-size: 1.2rem;
+  }
+  .content-text {
+      font-size: 0.9rem;
+  }
+  .know-more1-btn {
+      font-size: 0.8rem;
+      padding: 8px 15px;
+  }
+}

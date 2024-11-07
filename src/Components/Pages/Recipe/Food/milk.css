@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa; /* Light background for readability */
+    color: #333; /* Dark text for contrast */
+}
+
+
+
+.header-title {
+    font-size: 3rem; /* Larger font size for the main title */
+    color: #8b4513;
+    margin-bottom: 10px; /* Space below title */
+}
+
+.header-subtitle {
+    font-size: 1.4rem; /* Slightly larger subtitle */
+    color: #5b3a29;
+    margin-top: 0; /* Remove default margin for better alignment */
+}
+
+/* Product Information Section */
+.product-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto; /* Increased margin for space */
+    max-width: 1200px; /* Limiting width for better layout */
+    padding: 20px;
+    background-color:#b9917e; /* White background to highlight product */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-image {
+    max-width: 350px; /* Adjusted size for better visibility */
+    border-radius: 10px;
+    margin-right: 30px; /* More spacing between image and text */
+}
+
+.product-details {
+    max-width: 600px;
+}
+
+.product-details h2 {
+    font-size: 2.2rem; /* Larger heading */
+    color: #8b4513; /* Consistent color theme */
+    margin-bottom: 15px;
+}
+
+.product-details p {
+    font-size: 1.1rem; /* Increased font size for readability */
+    line-height: 1.6; /* Better line spacing */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.4rem; /* Slightly larger for emphasis */
+    margin: 40px 0 20px; /* Added top margin for spacing */
+    color: #8b4513;
+    text-align: center;
+}
+
+/* Nutritional Facts Section */
+.nutrition-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px; /* Increased margin for breathing space */
+}
+
+.nutrient {
+    background-color: #e0f7fa;
+    margin: 10px; /* More space between items */
+    padding: 15px; /* More padding for emphasis */
+    border-radius: 10px; /* Smooth corners */
+    font-size: 1.1rem; /* Increased font size */
+    min-width: 150px; /* Minimum width for consistency */
+    text-align: center; /* Center the text */
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 30px auto;
+    max-width: 800px; /* Limiting the width for better reading */
+    font-size: 1.1rem; /* Increased font size */
+    line-height: 1.6;
+}
+
+/* Recipes Section */
+.recipes {
+    margin: 20px auto;
+    padding: 25px; /* More padding for better spacing */
+    background-color: #fff3e0; /* Light warm background */
+    border-radius: 10px; /* Smooth corners */
+    max-width: 900px; /* Limiting the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+.recipes h3 {
+    margin: 15px 0; /* Increased margin for spacing */
+    color: #8b4513; /* Dark brown color for headings */
+    font-size: 1.8rem; /* Larger font size */
+}
+
+.recipes p {
+    margin: 10px 0; /* Adjusted margin for spacing */
+    font-size: 1.1rem; /* Increased font size */
+    color: #5b3a29; /* Darker brown color for text */
+}
+
+/* Footer Section */
+
+
+@media only screen and (max-width: 768px) {
+    .potato-insights-container {
+        padding: 10px; /* Adjust padding for mobile */
+        margin-left: 0; /* Remove left margin on mobile for full width */
+    }
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-box {
+        padding: 15px; /* Adjust padding for boxes */
+    }
+    .content-title {
+        font-size: 1.2rem; /* Smaller title font for mobile */
+    }
+    .content-text {
+        font-size: 0.9rem; /* Smaller text font for mobile */
+    }
+    .know-more1-btn {
+        font-size: 0.8rem; /* Button font size for mobile */
+        padding: 8px 15px; /* Slightly larger padding for touch targets */
+    }
+}   
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #04D939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #03c829;
+  }
